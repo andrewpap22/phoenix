@@ -12,7 +12,7 @@ import { PhoenixMenuNode, LHCbLoader, Configuration, PresetView } from 'phoenix-
 export class LHCbComponent implements OnInit {
   events: any;
   loader: LHCbLoader;
-  phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode('Phoenix Menu', 'phoenix-menu');
+  phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode('LHCb Menu', 'phoenix-menu');
   loaded = false;
 
   constructor(private eventDisplay: EventDisplayService, private http: HttpClient) {

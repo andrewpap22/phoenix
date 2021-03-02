@@ -4,14 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { GeometryComponent } from './sections/geometry/geometry.component';
-import { AtlasComponent } from './sections/atlas/atlas.component';
 import { LHCbComponent } from './sections/lhcb/lhcb.component';
-import { CMSComponent } from './sections/cms/cms.component';
-import { TrackmlComponent } from './sections/trackml/trackml.component';
 import { PhoenixUIModule } from 'phoenix-ui-components';
 import { RouterModule, Routes } from '@angular/router';
-import { PlaygroundComponent } from './sections/playground/playground.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 
@@ -19,18 +14,13 @@ let routes: Routes;
 
 if (environment?.singleEvent) {
   routes = [
-    { path: '', component: AtlasComponent }
+    { path: '', component: LHCbComponent }
   ];
 } else {
   routes = [
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
-    { path: 'geometry', component: GeometryComponent },
-    { path: 'atlas', component: AtlasComponent },
-    { path: 'lhcb', component: LHCbComponent },
-    { path: 'cms', component: CMSComponent },
-    { path: 'trackml', component: TrackmlComponent },
-    { path: 'playground', component: PlaygroundComponent }
+    { path: 'lhcb', component: LHCbComponent }
   ];
 }
 
@@ -38,12 +28,7 @@ if (environment?.singleEvent) {
   declarations: [
     AppComponent,
     HomeComponent,
-    GeometryComponent,
-    AtlasComponent,
-    LHCbComponent,
-    CMSComponent,
-    TrackmlComponent,
-    PlaygroundComponent
+    LHCbComponent
   ],
   imports: [
     BrowserModule,
@@ -55,3 +40,4 @@ if (environment?.singleEvent) {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
